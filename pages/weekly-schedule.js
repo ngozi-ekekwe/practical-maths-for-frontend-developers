@@ -13,7 +13,7 @@ export default function WeeklySchedular() {
 
       <Header></Header>
       <main>
-        <Hero title="Weekly Schedular" />
+        <Section title="Weekly Schedular" />
       </main>
       <Footer></Footer>
     </>

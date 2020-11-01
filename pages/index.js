@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Header from "@components/Header";
 import Section from "@components/Section";
 import Footer from "@components/Footer";
@@ -17,32 +18,38 @@ export default function Home() {
       <Header></Header>
       <main>
         <Section title="Practical Maths For Frontend Developers">
-          <div className={styles.cards}>
-            <div
+          <ul className={styles.cards}>
+            <li
               className={styles.card}
               style={{
                 backgroundColor: randomColors[roll(0, randomColors.length)],
               }}
             >
-              Shopping Cart
-            </div>
-            <div
+              <Link href="/shopping-cart">
+                <a>Shopping Cart</a>
+              </Link>
+            </li>
+            <li
               className={styles.card}
               style={{
                 backgroundColor: randomColors[roll(0, randomColors.length)],
               }}
             >
-              Weekly Schedule
-            </div>
-            <div
+              <Link href="/weekly-schedule">
+                <a> Weekly Schedule</a>
+              </Link>
+            </li>
+            <li
               className={styles.card}
               style={{
                 backgroundColor: randomColors[roll(0, randomColors.length)],
               }}
             >
-              Monthly Expense Sheet
-            </div>
-          </div>
+              <Link href="/monthly-expense-sheet">
+                <a> Monthly Expense Sheet</a>
+              </Link>
+            </li>
+          </ul>
         </Section>
       </main>
       <Footer></Footer>
