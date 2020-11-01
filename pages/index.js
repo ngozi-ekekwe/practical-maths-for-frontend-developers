@@ -11,8 +11,12 @@ export default function Home() {
       </Head>
 
       <Header title="Practical Maths For Frontend Developers"></Header>
-      <main></main>
-      <Footer></Footer>
+      <main>
+
+      </main>
+      <Footer>
+        
+      </Footer>
     </>
   );
 }
