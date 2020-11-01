@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Hero from "@components/Hero";
 
 export default function ShoppingCart() {
   const roll = (minValue, maxValue) => {
@@ -14,8 +15,10 @@ export default function ShoppingCart() {
         <link rel="icon" href="" />
       </Head>
 
-      <Header title="Shopping Cart"></Header>
-      <main></main>
+      <Header></Header>
+      <main>
+        <Hero title="Shopping Cart" />
+      </main>
       <Footer></Footer>
     </>
   );

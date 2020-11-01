@@ -31,14 +31,14 @@ body {
 }
 
 header {
-  background-color: lightgreen;
+  background-color: darkslategray;
+  color: white;
   font-size: 1.5rem;
   padding: 1rem;
   text-align: center;
 }
 
 main {
-  background-color: lightblue;
   font-size: 1.5rem;
   height: calc(var(--mainHeight));
   height: var(--mainHeight);
@@ -48,8 +48,12 @@ main {
 }
 
 footer {
-  background-color: lightgreen;
+  background-color: darkslategray;
   font-size: 1.5rem;
   padding: 1rem;
   text-align: center;
+}
+
+section {
+  height: 40%;
 }

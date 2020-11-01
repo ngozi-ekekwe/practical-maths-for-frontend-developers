@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "@components/Header";
+import Hero from "@components/Hero";
 import Footer from "@components/Footer";
 
 export default function MonthlyExpenseSheet() {
@@ -10,8 +11,10 @@ export default function MonthlyExpenseSheet() {
         <link rel="icon" href="" />
       </Head>
 
-      <Header title="Monthly Expense Sheet"></Header>
-      <main></main>
+      <Header></Header>
+      <main>
+        <Hero title="Monthly Expense Sheet" />
+      </main>
       <Footer></Footer>
     </>
   );

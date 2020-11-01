@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Hero from "@components/Hero";
 
 export default function WeeklySchedular() {
   return (
@@ -10,8 +11,10 @@ export default function WeeklySchedular() {
         <link rel="icon" href="" />
       </Head>
 
-      <Header title="Weekly Schedular"></Header>
-      <main></main>
+      <Header></Header>
+      <main>
+        <Hero title="Weekly Schedular" />
+      </main>
       <Footer></Footer>
     </>
   )

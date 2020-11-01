@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Header from "@components/Header";
+import Hero from "@components/Hero";
 import Footer from "@components/Footer";
+import Card from "@components/Card";
 
 export default function Home() {
   return (
@@ -10,12 +12,17 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <Header title="Practical Maths For Frontend Developers"></Header>
+      <Header></Header>
       <main>
-
+        <Hero title="Practical Maths For Frontend Developers" />
+        <div>
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </main>
       <Footer>
-        
+
       </Footer>
     </>
   );
