@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "@components/Header";
-import Hero from "@components/Hero";
+import Section from "@components/Section";
 import Footer from "@components/Footer";
 
 export default function MonthlyExpenseSheet() {
@@ -13,7 +13,7 @@ export default function MonthlyExpenseSheet() {
 
       <Header></Header>
       <main>
-        <Hero title="Monthly Expense Sheet" />
+        <Section title="Monthly Expense Sheet" />
       </main>
       <Footer></Footer>
     </>
