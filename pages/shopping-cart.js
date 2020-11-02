@@ -4,7 +4,8 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll, possibleProducts } from "../utils";
-import styles from "../styles/ShoppingCart.module.css"
+
+import styles from "../styles/Shopping.module.css"
 
 export default function ShoppingCart() {
   let products = [...Array(5)].map((_, i) => {
@@ -64,12 +65,12 @@ export default function ShoppingCart() {
                 );
               })}
           </div> */}
-          <div className={styles.summary}>
+          {/* <div className={styles.summary}> */}
             {/* <div>Total: ${cartTotal.toFixed(2)}</div>
             <div>Tax Rate: {taxRate}%</div>
             <div>Taxed Total: ${taxTotal} </div>
             <div>Total Weight : {totalWeight.toFixed(2)}oz</div> */}
-          </div>
+          {/* </div> */}
         </Section>
       </main>
       <Footer></Footer>
