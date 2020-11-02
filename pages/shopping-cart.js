@@ -45,13 +45,13 @@ export default function ShoppingCart() {
         <link rel="icon" href="" />
       </Head>
       <Header></Header>
-      
+
       <main>
-        <Section title="Shopping Cart">
+        <Section title="Shopping Cart 🛒">
           <Hint>
             <p>Randomly generates a shopping cart with different products, price and total price including tax rate</p>
           </Hint>
-          <div className={styles.products}>
+          {/* <div className={styles.products}>
             {products &&
               products.map((prod) => {
                 return (
@@ -63,12 +63,12 @@ export default function ShoppingCart() {
                   </div>
                 );
               })}
-          </div>
+          </div> */}
           <div className={styles.summary}>
-            <div>Total: ${cartTotal.toFixed(2)}</div>
+            {/* <div>Total: ${cartTotal.toFixed(2)}</div>
             <div>Tax Rate: {taxRate}%</div>
             <div>Taxed Total: ${taxTotal} </div>
-            <div>Total Weight : {totalWeight.toFixed(2)}oz</div>
+            <div>Total Weight : {totalWeight.toFixed(2)}oz</div> */}
           </div>
         </Section>
       </main>

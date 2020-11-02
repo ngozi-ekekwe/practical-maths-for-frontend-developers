@@ -7,13 +7,13 @@ export default function WeeklySchedular() {
   return (
     <>
       <Head>
-        <title>Weekly Schedular</title>
+        <title>Weekly Schedule ✅</title>
         <link rel="icon" href="" />
       </Head>
 
       <Header></Header>
       <main>
-        <Section title="Weekly Schedular" />
+        <Section title="Weekly Schedule ✅" />
       </main>
       <Footer></Footer>
     </>
