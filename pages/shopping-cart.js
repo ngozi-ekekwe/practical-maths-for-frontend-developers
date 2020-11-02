@@ -52,7 +52,7 @@ export default function ShoppingCart() {
           <Hint>
             <p>Randomly generates a shopping cart with different products, price and total price including tax rate</p>
           </Hint>
-          {/* <div className={styles.products}>
+          <div className={styles.products}>
             {products &&
               products.map((prod) => {
                 return (
@@ -64,7 +64,7 @@ export default function ShoppingCart() {
                   </div>
                 );
               })}
-          </div> */}
+          </div>
           {/* <div className={styles.summary}> */}
             {/* <div>Total: ${cartTotal.toFixed(2)}</div>
             <div>Tax Rate: {taxRate}%</div>
