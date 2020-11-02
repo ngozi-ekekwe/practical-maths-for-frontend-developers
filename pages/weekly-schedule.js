@@ -7,6 +7,7 @@ import { roll } from "utils";
 import styles from '../styles/Weeklyschedule.module.css';
 
 
+
 export default function WeeklySchedular() {
   let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
