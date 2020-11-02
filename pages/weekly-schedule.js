@@ -4,14 +4,11 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll } from "utils";
-import styles from '../styles/Weeklyschedule.module.css';
-
-
 
 export default function WeeklySchedular() {
-  let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
-  let firstDay = new Date("3/1/2020")
+  let firstDay = new Date("3/1/2020");
 
   // Write a getNextDay Function
   // Takes in a Date object and
@@ -29,10 +26,10 @@ export default function WeeklySchedular() {
     return [...Array(roll(2, 3))].map((_, i) => {
       return {
         index: i,
-        name: `Task ${roll(1, 100)}`,
-        complete: roll(0, 2) ? true : false
-      }
-    })
+        name: `Task ${roll(1, 60)}`,
+        complete: roll(0, 2) ? true : false,
+      };
+    });
   }
 
   // Returns an array of days representing the week
@@ -42,14 +39,56 @@ export default function WeeklySchedular() {
       let weekday = {
         index: i,
         date: day,
-        tasks:  generateTasks()
-      }
+        tasks: generateTasks(),
+      };
       day = getNextDay(day);
       return weekday;
-    })
+    });
   }
 
-  console.log(buildWeek(firstDay))
+  let week = buildWeek(firstDay);
+
+  let taskToHtml = (tasks) => {
+    return tasks.reduce((acc, task) => {
+      return (
+        acc +
+        `<div class="circle-container ${task.complete ? "checked" : ""}">
+          <div class="circle"></div>
+        <label>${task.name}</label>
+        </div>`
+      );
+    }, "");
+  };
+
+  let getDayTasksComplete = (dayTask) => {
+    return dayTask.reduce((acc, currentTask) => {
+      if (currentTask.complete) {
+        return acc + 1;
+      }
+      return acc;
+    }, 0);
+  };
+
+  let getWeekTasksComplete = (week) => {
+    return week.reduce((acc, currentDay) => {
+      return acc + getDayTasksComplete(currentDay.tasks);
+    }, 0);
+  };
+
+  let scheduledWeek = week.reduce((acc, currentDay) => {
+    return (
+      acc +
+      `<div class="day">
+      <div>${weekdays[currentDay.date.getDay()]} -  ${getDayTasksComplete(
+        currentDay.tasks
+      )} complete</div>
+      <div class="tasks">${taskToHtml(currentDay.tasks)}</div>
+      </div>`
+    );
+  }, " ");
+
+  
+
   return (
     <>
       <Head>
@@ -60,13 +99,9 @@ export default function WeeklySchedular() {
       <Header></Header>
       <main>
         <Section title="Weekly Schedule ✅">
-          <Hint>For people that love to plan</Hint>
-          <div className="">
-            {weekdays && weekdays.map((day, index) => {
-              return (
-              <div className={styles.day} key={index}>{day}</div>
-              )
-            })}
+          <Hint>{getWeekTasksComplete(week)} Tasks completed</Hint>
+          <div id="WeeklySchedule">
+            <div dangerouslySetInnerHTML={{ __html: scheduledWeek }}></div>
           </div>
         </Section>
       </main>
