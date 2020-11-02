@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "@components/Header";
 import Section from "@components/Section";
+import Hint from "@components/Hint";
 import Footer from "@components/Footer";
 
 import { roll } from "../utils";
@@ -18,6 +19,14 @@ export default function Home() {
       <Header></Header>
       <main>
         <Section title="Practical Maths For Frontend Developers">
+          <Hint>
+            <ul>
+              <li>roll() function to randomely generate numbers within a range</li>
+              <li>calc()</li>
+              <li>JavaScript Math Object</li>
+              <li>JavaScript Date Object</li>
+            </ul>
+          </Hint>
           <ul className={styles.cards}>
             <li
               className={styles.card}
