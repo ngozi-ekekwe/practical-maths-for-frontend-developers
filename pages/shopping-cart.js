@@ -65,12 +65,12 @@ export default function ShoppingCart() {
                 );
               })}
           </div>
-          {/* <div className={styles.summary}> */}
-            {/* <div>Total: ${cartTotal.toFixed(2)}</div>
+          <div className={styles.summary}>
+            <div>Total: ${cartTotal.toFixed(2)}</div>
             <div>Tax Rate: {taxRate}%</div>
             <div>Taxed Total: ${taxTotal} </div>
-            <div>Total Weight : {totalWeight.toFixed(2)}oz</div> */}
-          {/* </div> */}
+            <div>Total Weight : {totalWeight.toFixed(2)}oz</div>
+          </div>
         </Section>
       </main>
       <Footer></Footer>
