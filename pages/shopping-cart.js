@@ -45,6 +45,7 @@ export default function ShoppingCart() {
         <link rel="icon" href="" />
       </Head>
       <Header></Header>
+      
       <main>
         <Section title="Shopping Cart">
           <Hint>
