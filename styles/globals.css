@@ -115,7 +115,7 @@ footer {
   text-decoration-color: MediumSlateBlue;
 }
 
-.circle {
+.circle-container .circle {
   height: 1rem; 
   width: 1rem; 
   background: white;        
@@ -124,10 +124,68 @@ footer {
   cursor: pointer;
   margin-right: 1rem;
 }
-.circle:hover {
+.circle-container .circle:hover {
   box-shadow: 0 0 0.3rem MediumSlateBlue;
 }
 
 .circle-container.checked .circle {
   background: MediumSlateBlue;
+}
+
+.shape-container {
+  width: 700px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin: 3rem auto;
+}
+
+.shape-container > div {
+  width: calc(100% - (20px * 2) / 2)
+}
+
+.square {
+  height: 8rem;
+  width: 8rem;
+  background-color: green;  
+  border: 0.5rem solid black;
+  margin: 1rem;
+}
+
+.shape-container .circle {
+  height: 8rem;
+  width: 8rem;
+  background-color: blue;  
+  border-radius: 50%;
+  border: 0.5rem solid black;
+  margin: 1rem;
+}
+
+.shape-container .diamond {
+  height: 8rem;
+  width: 8rem;
+  background-color: yellow;  
+  transform: rotate(45deg);
+  border: 0.5rem solid black;
+  margin: 1rem;
+}
+
+.shape-container .triangle {
+  height: 0;
+  width: 0;
+  position: relative;
+  border-right: 8.5rem solid transparent;
+  border-left: 8.5rem solid transparent;
+  border-bottom: 8.5rem solid black;
+}
+
+.triangle:after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-right: 7.5rem solid transparent;
+  border-left: 7.5rem solid transparent;
+  border-bottom: 7.5rem solid red;
+  left: -7.5rem;
+  top: .6rem;
 }
