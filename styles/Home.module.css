@@ -7,7 +7,7 @@
 
 .card {
   cursor: pointer;
-  width: calc((100% - (20px * 2)) / 3);
+  width: calc((100% - (20px * 3)) / 4);
   border-radius: 8px;
   display: flex;
   align-items: center;

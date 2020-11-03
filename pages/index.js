@@ -21,8 +21,9 @@ export default function Home() {
         <Section title="Practical Maths For Frontend Developers">
           <Hint>
             <ul>
-              <li>roll() function to randomely generate numbers within a range</li>
-              <li>calc()</li>
+              <li>roll( ) function to randomely generate numbers within a range</li>
+              <li>calc( )</li>
+              <li>CSS Shapes</li>
               <li>JavaScript Math Object</li>
               <li>JavaScript Date Object</li>
             </ul>
@@ -56,6 +57,16 @@ export default function Home() {
             >
               <Link href="/monthly-expense-sheet">
                 <a> Monthly Expense Sheet</a>
+              </Link>
+            </li>
+            <li
+              className={styles.card}
+              style={{
+                backgroundColor: randomColors[roll(0, randomColors.length)],
+              }}
+            >
+              <Link href="/css-shapes">
+                <a> CSS Shapes</a>
               </Link>
             </li>
           </ul>

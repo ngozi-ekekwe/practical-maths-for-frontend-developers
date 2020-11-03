@@ -6,7 +6,7 @@ import Hint from "@components/Hint";
 import { roll } from "utils";
 
 export default function WeeklySchedular() {
-  let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
   let firstDay = new Date("3/1/2020");
 
@@ -79,7 +79,7 @@ export default function WeeklySchedular() {
     return (
       acc +
       `<div class="day">
-      <div>${weekdays[currentDay.date.getDay()]} -  ${getDayTasksComplete(
+      <div class="task-header">${weekdays[currentDay.date.getDay()]} -  ${getDayTasksComplete(
         currentDay.tasks
       )} complete</div>
       <div class="tasks">${taskToHtml(currentDay.tasks)}</div>
