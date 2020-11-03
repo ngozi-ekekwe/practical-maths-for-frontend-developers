@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Section from "@components/Section";
+import BreadCrumbs from '@components/Breadcrumbs';
 import Footer from "@components/Footer";
 
 export default function CSSShapes() {
@@ -12,6 +13,7 @@ export default function CSSShapes() {
       </Head>
 
       <Header></Header>
+      <BreadCrumbs />
       <main>
         <Section title="CSS SHAPES" />
       </main>

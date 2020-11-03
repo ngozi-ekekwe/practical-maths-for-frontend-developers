@@ -4,6 +4,7 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll } from "utils";
+import BreadCrumbs from '@components/Breadcrumbs';
 
 export default function WeeklySchedular() {
   let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -97,6 +98,7 @@ export default function WeeklySchedular() {
       </Head>
 
       <Header></Header>
+      <BreadCrumbs />
       <main>
         <Section title="Weekly Schedule ✅">
           <Hint>{getWeekTasksComplete(week)} Tasks completed</Hint>

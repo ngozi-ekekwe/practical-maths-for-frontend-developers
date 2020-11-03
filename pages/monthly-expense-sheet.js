@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@components/Header";
 import Section from "@components/Section";
 import Footer from "@components/Footer";
+import BreadCrumbs from '@components/Breadcrumbs';
 
 export default function MonthlyExpenseSheet() {
   return (
@@ -12,6 +13,7 @@ export default function MonthlyExpenseSheet() {
       </Head>
 
       <Header></Header>
+      <BreadCrumbs />
       <main>
         <Section title="Monthly Expense Sheet" />
       </main>

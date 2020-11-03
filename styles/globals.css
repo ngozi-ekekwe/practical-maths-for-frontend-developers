@@ -47,6 +47,24 @@ main {
   text-align: center;
 }
 
+.breadcrumbs ul {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs {
+  width: 700px;
+  margin: 2rem auto;
+}
+
 footer {
   background-color: darkslategray;
   font-size: 1.5rem;

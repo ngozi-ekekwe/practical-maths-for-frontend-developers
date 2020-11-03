@@ -4,6 +4,7 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll, possibleProducts } from "../utils";
+import BreadCrumbs from '@components/Breadcrumbs';
 
 import styles from "../styles/Shopping.module.css"
 
@@ -46,7 +47,7 @@ export default function ShoppingCart() {
         <link rel="icon" href="" />
       </Head>
       <Header></Header>
-
+      <BreadCrumbs />
       <main>
         <Section title="Shopping Cart 🛒">
           <Hint>
