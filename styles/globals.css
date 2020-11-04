@@ -135,7 +135,6 @@ footer {
 .shape-container {
   width: 700px;
   display: flex;
-  /* flex-wrap: wrap; */
   margin: 3rem auto;
 }
 
@@ -188,4 +187,22 @@ footer {
   border-bottom: 7.5rem solid red;
   left: -7.5rem;
   top: .6rem;
+}
+
+.month-schedule > div {
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+}
+
+.month-schedule .day {
+  width: calc(100% / 3);
+  height: calc(var(--mainHeight) / 4);
+  border: 0.1rem solid black;
+  box-sizing: border-box;
+}
+
+.day:nth-last-of-type(even) {
+  background-color: lightyellow;
 }
