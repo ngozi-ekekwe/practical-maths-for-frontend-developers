@@ -206,3 +206,8 @@ footer {
 .day:nth-last-of-type(even) {
   background-color: lightyellow;
 }
+
+.expense {
+  color: red;
+  padding: 0.1rem;
+}
