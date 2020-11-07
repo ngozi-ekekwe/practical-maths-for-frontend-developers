@@ -83,8 +83,6 @@ export default function MonthlyExpenseSheet() {
 
   let monthlyNetValue = getMonthNetValue()
 
-  console.log(monthlyNetValue, 'monthlyNetValue')
-
   // Write a function to display the month
   let printMonth = month.reduce((acc, currentDay) => {
     return (
