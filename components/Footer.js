@@ -1,6 +1,6 @@
 
 export default function Footer() {
   return (
-  <footer>Ngozi Ekekwe {new Date().getFullYear()}</footer>
+  <footer><span><a href="https://github.com/ngozi-ekekwe">Ngozi Ekekwe</a></span> {new Date().getFullYear()}</footer>
   );
 }

@@ -32,3 +32,16 @@ export const possibleProducts = [
   "🥦",
 ];
 
+export const possibleProductNames = [
+  'Apple',
+  'Mango',
+  'Egg Plant',
+  'Orange',
+  'Coconut',
+  'Carrot',
+  'Tomatoe',
+  'Corn',
+  'Water Melon',
+  'Pear',
+  'Pepper'
+]

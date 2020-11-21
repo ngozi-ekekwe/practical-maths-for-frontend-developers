@@ -8,7 +8,7 @@ import { roll } from "../utils";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const randomColors = ["purple", "lightsteelblue", "indianred", "darkslategray"];
+  const randomColors = ["lightsteelblue", "indianred"];
   return (
     <>
       <Head>
@@ -96,8 +96,9 @@ export default function Home() {
                       }}
                     >C</div>
                     <div className={styles.cardcontent}>
-                      <h3>CSS Shapes</h3>A mobile app for climbers that provides
-                      workouts and tracking.
+                      <h3>CSS Shapes</h3>
+                      <p>A mobile app for climbers that provides
+                      workouts and tracking.</p>
                     </div>
                   </a>
                 </Link>

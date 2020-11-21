@@ -105,7 +105,10 @@ export default function MonthlyExpenseSheet() {
       <main>
         <div className="container">
           <Section title="Monthly Expense Sheet 📅">
-            <Hint>Monthly Expense Sheet</Hint>
+            <p>
+              Randomly generates a shopping cart with different products, price
+              and total price including tax rate
+            </p>
             <div className="month-schedule">
               <div className="monthly-summary">
                 Monthly Budget ${monthlyBudget.toFixed(2)} | Net Value $

@@ -18,9 +18,10 @@ export default function CSSShapes() {
       <main>
         <div className="container">
           <Section title="🔺 CSS Shapes 🔵" />
-          <Hint>
-            <p>Shapes you can make with CSS</p>
-          </Hint>
+          <p>
+            Randomly generates a shopping cart with different products, price
+            and total price including tax rate
+          </p>
           <div className="shape-container">
             <div>
               <div class="square"></div>

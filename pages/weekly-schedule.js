@@ -102,13 +102,15 @@ export default function WeeklySchedular() {
         <title>Weekly Schedule ✅</title>
         <link rel="icon" href="" />
       </Head>
-
       <Header></Header>
       <BreadCrumbs />
       <main>
         <div className="container">
           <Section title="Weekly Schedule ✅">
-            <Hint>{getWeekTasksComplete(week)} Tasks completed</Hint>
+            <p>
+              Randomly generates a shopping cart with different products, price
+              and total price including tax rate
+            </p>
             <div id="WeeklySchedule">
               <div dangerouslySetInnerHTML={{ __html: scheduledWeek }}></div>
             </div>
