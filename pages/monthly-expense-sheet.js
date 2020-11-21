@@ -22,7 +22,7 @@ export default function MonthlyExpenseSheet() {
   let utilities = roll(300, 500).toFixed(2);
 
   let monthlyBudget = monthlyIncome - parseFloat(rent) - parseFloat(utilities);
-  
+
   function generateExpenses() {
     let expenseCount = roll(0, 4);
     return [...Array(expenseCount)].map((_, i) => {
@@ -32,8 +32,6 @@ export default function MonthlyExpenseSheet() {
       };
     });
   }
-
-  
 
   // Generate an Array of all Days in the Month of a given date
   function buildMonth(day) {
@@ -62,17 +60,16 @@ export default function MonthlyExpenseSheet() {
   // Calculate / Display Leftover Cash
   function getMonthNetValue() {
     let monthlyExpenseTotal = month.reduce((acc, simpleDay) => {
-      return acc + getDailyCost(simpleDay)
-    }, 0)
+      return acc + getDailyCost(simpleDay);
+    }, 0);
 
     return monthlyBudget - monthlyExpenseTotal;
   }
 
-
   function getDailyCost(day) {
     return day.expenses.reduce((acc, expense) => {
-      return acc + parseFloat(expense.value)
-    }, 0)
+      return acc + parseFloat(expense.value);
+    }, 0);
   }
 
   let displayExpenses = (expenses) => {
@@ -81,7 +78,7 @@ export default function MonthlyExpenseSheet() {
     }, "");
   };
 
-  let monthlyNetValue = getMonthNetValue()
+  let monthlyNetValue = getMonthNetValue();
 
   // Write a function to display the month
   let printMonth = month.reduce((acc, currentDay) => {
@@ -96,8 +93,6 @@ export default function MonthlyExpenseSheet() {
     );
   }, "");
 
-
-
   return (
     <>
       <Head>
@@ -108,15 +103,18 @@ export default function MonthlyExpenseSheet() {
       <Header></Header>
       <BreadCrumbs />
       <main>
-        <Section title="Monthly Expense Sheet 📅">
-          <Hint>Monthly Expense Sheet</Hint>
-          <div className="month-schedule">
-            <div className="monthly-summary">
-              Monthly Budget ${monthlyBudget.toFixed(2)} | Net Value ${monthlyNetValue.toFixed(2)}
+        <div className="container">
+          <Section title="Monthly Expense Sheet 📅">
+            <Hint>Monthly Expense Sheet</Hint>
+            <div className="month-schedule">
+              <div className="monthly-summary">
+                Monthly Budget ${monthlyBudget.toFixed(2)} | Net Value $
+                {monthlyNetValue.toFixed(2)}
+              </div>
+              <div dangerouslySetInnerHTML={{ __html: printMonth }}></div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: printMonth }}></div>
-          </div>
-        </Section>
+          </Section>
+        </div>
       </main>
       <Footer></Footer>
     </>

@@ -16,22 +16,24 @@ export default function CSSShapes() {
       <Header></Header>
       <BreadCrumbs />
       <main>
-        <Section title="🔺 CSS Shapes 🔵" />
-        <Hint>
-          <p>Shapes you can make with CSS</p>
-        </Hint>
-        <div className="shape-container">
-          <div>
-            <div class="square"></div>
-          </div>
-          <div>
-            <div class="circle"></div>
-          </div>
-          <div>
-            <div class="diamond"></div>
-          </div>
-          <div>
-            <div class="triangle"></div>
+        <div className="container">
+          <Section title="🔺 CSS Shapes 🔵" />
+          <Hint>
+            <p>Shapes you can make with CSS</p>
+          </Hint>
+          <div className="shape-container">
+            <div>
+              <div class="square"></div>
+            </div>
+            <div>
+              <div class="circle"></div>
+            </div>
+            <div>
+              <div class="diamond"></div>
+            </div>
+            <div>
+              <div class="triangle"></div>
+            </div>
           </div>
         </div>
       </main>

@@ -4,9 +4,9 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll, possibleProducts } from "../utils";
-import BreadCrumbs from '@components/Breadcrumbs';
+import BreadCrumbs from "@components/Breadcrumbs";
 
-import styles from "../styles/Shopping.module.css"
+import styles from "../styles/Shopping.module.css";
 
 export default function ShoppingCart() {
   let products = [...Array(5)].map((_, i) => {
@@ -49,30 +49,35 @@ export default function ShoppingCart() {
       <Header></Header>
       <BreadCrumbs />
       <main>
-        <Section title="Shopping Cart 🛒">
-          <Hint>
-            <p>Randomly generates a shopping cart with different products, price and total price including tax rate</p>
-          </Hint>
-          <div className={styles.products}>
-            {products &&
-              products.map((prod) => {
-                return (
-                  <div className={styles.product} key={prod.index}>
-                    <div>{prod.product}</div>
-                    <div>{prod.price}</div>
-                    <div>x{prod.count}</div>
-                    <div>{prod.weight}oz</div>
-                  </div>
-                );
-              })}
-          </div>
-          <div className={styles.summary}>
-            <div>Total: ${cartTotal.toFixed(2)}</div>
-            <div>Tax Rate: {taxRate}%</div>
-            <div>Taxed Total: ${taxTotal} </div>
-            <div>Total Weight : {totalWeight.toFixed(2)}oz</div>
-          </div>
-        </Section>
+        <div className="container">
+          <Section title="Shopping Cart 🛒">
+            <Hint>
+              <p>
+                Randomly generates a shopping cart with different products,
+                price and total price including tax rate
+              </p>
+            </Hint>
+            <div className={styles.products}>
+              {products &&
+                products.map((prod) => {
+                  return (
+                    <div className={styles.product} key={prod.index}>
+                      <div>{prod.product}</div>
+                      <div>{prod.price}</div>
+                      <div>x{prod.count}</div>
+                      <div>{prod.weight}oz</div>
+                    </div>
+                  );
+                })}
+            </div>
+            <div className={styles.summary}>
+              <div>Total: ${cartTotal.toFixed(2)}</div>
+              <div>Tax Rate: {taxRate}%</div>
+              <div>Taxed Total: ${taxTotal} </div>
+              <div>Total Weight : {totalWeight.toFixed(2)}oz</div>
+            </div>
+          </Section>
+        </div>
       </main>
       <Footer></Footer>
     </>

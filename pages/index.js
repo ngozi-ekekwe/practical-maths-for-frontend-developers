@@ -2,75 +2,109 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "@components/Header";
 import Section from "@components/Section";
-import Hint from "@components/Hint";
 import Footer from "@components/Footer";
 
 import { roll } from "../utils";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const randomColors = ["purple", "indianred", "darkslategray"];
+  const randomColors = ["purple", "lightsteelblue", "indianred", "darkslategray"];
   return (
     <>
       <Head>
-        <title>Practial Maths For frontend developers</title>
+        <title>Practial maths for frontend developers</title>
         <link rel="icon" href="" />
       </Head>
       <Header></Header>
       <main>
-        <Section title="Practical Maths For Frontend Developers">
-          <Hint>
-            <ul>
-              <li>roll( ) function to randomely generate numbers within a range</li>
-              <li>calc( )</li>
-              <li>CSS Shapes</li>
-              <li>JavaScript Math Object</li>
-              <li>JavaScript Date Object</li>
+        <div className="container">
+          <Section title="Practical maths for frontend developers">
+            <p>
+              Projects built from interactive course with{" "}
+              <a href="https://scrimba.com/learn/practicalmath">
+                Scrimba & Ryan Gonyon
+              </a>
+            </p>
+            <ul className={styles.cards}>
+              <li className={styles.card}>
+                <Link href="/shopping-cart">
+                  <a>
+                    <div
+                      className={styles.cardbackground}
+                      style={{
+                        backgroundColor:
+                          randomColors[roll(0, randomColors.length)],
+                      }}
+                    >
+                      S
+                    </div>
+                    <div className={styles.cardcontent}>
+                      <h3>Shopping Cart</h3>
+                      <p>
+                      Randomly generates a shopping cart with different products, price and total price including tax rate.
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.card}>
+                <Link href="/weekly-schedule">
+                  <a>
+                    <div
+                      className={styles.cardbackground}
+                      style={{
+                        backgroundColor:
+                          randomColors[roll(0, randomColors.length)],
+                      }}
+                    > W </div>
+                    <div className={styles.cardcontent}>
+                      <h3>Weekly Schedule</h3>
+                      <p>
+                        Randomly generates a shopping cart with different products, price and total price including tax rate
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.card}>
+                <Link href="/monthly-expense-sheet">
+                  <a>
+                    <div
+                      className={styles.cardbackground}
+                      style={{
+                        backgroundColor:
+                          randomColors[roll(0, randomColors.length)],
+                      }}
+                    >M</div>
+                    <div className={styles.cardcontent}>
+                      <h3>Monthly Expense sheet</h3>
+                      <p>
+                        Randomly generates a shopping cart with different products, price and total price including tax rate
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.card}>
+                <Link href="/css-shapes">
+                  <a>
+                    <div
+                      className={styles.cardbackground}
+                      style={{
+                        backgroundColor:
+                          randomColors[roll(0, randomColors.length)],
+                      }}
+                    >C</div>
+                    <div className={styles.cardcontent}>
+                      <h3>CSS Shapes</h3>A mobile app for climbers that provides
+                      workouts and tracking.
+                    </div>
+                  </a>
+                </Link>
+              </li>
             </ul>
-          </Hint>
-          <ul className={styles.cards}>
-            <li
-              className={styles.card}
-              style={{
-                backgroundColor: randomColors[roll(0, randomColors.length)],
-              }}
-            >
-              <Link href="/shopping-cart">
-                <a>Shopping Cart</a>
-              </Link>
-            </li>
-            <li
-              className={styles.card}
-              style={{
-                backgroundColor: randomColors[roll(0, randomColors.length)],
-              }}
-            >
-              <Link href="/weekly-schedule">
-                <a> Weekly Schedule</a>
-              </Link>
-            </li>
-            <li
-              className={styles.card}
-              style={{
-                backgroundColor: randomColors[roll(0, randomColors.length)],
-              }}
-            >
-              <Link href="/monthly-expense-sheet">
-                <a> Monthly Expense Sheet</a>
-              </Link>
-            </li>
-            <li
-              className={styles.card}
-              style={{
-                backgroundColor: randomColors[roll(0, randomColors.length)],
-              }}
-            >
-              <Link href="/css-shapes">
-                <a> CSS Shapes</a>
-              </Link>
-            </li>
-          </ul>
-        </Section>
+          </Section>
+        </div>
       </main>
       <Footer></Footer>
     </>

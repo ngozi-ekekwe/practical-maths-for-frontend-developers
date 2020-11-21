@@ -4,10 +4,18 @@ import Footer from "@components/Footer";
 import Section from "@components/Section";
 import Hint from "@components/Hint";
 import { roll } from "utils";
-import BreadCrumbs from '@components/Breadcrumbs';
+import BreadCrumbs from "@components/Breadcrumbs";
 
 export default function WeeklySchedular() {
-  let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  let weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   let firstDay = new Date("3/1/2020");
 
@@ -80,15 +88,13 @@ export default function WeeklySchedular() {
     return (
       acc +
       `<div class="day">
-      <div class="task-header">${weekdays[currentDay.date.getDay()]} -  ${getDayTasksComplete(
-        currentDay.tasks
-      )} complete</div>
+      <div class="task-header">${
+        weekdays[currentDay.date.getDay()]
+      } -  ${getDayTasksComplete(currentDay.tasks)} complete</div>
       <div class="tasks">${taskToHtml(currentDay.tasks)}</div>
       </div>`
     );
   }, " ");
-
-  
 
   return (
     <>
@@ -100,12 +106,14 @@ export default function WeeklySchedular() {
       <Header></Header>
       <BreadCrumbs />
       <main>
-        <Section title="Weekly Schedule ✅">
-          <Hint>{getWeekTasksComplete(week)} Tasks completed</Hint>
-          <div id="WeeklySchedule">
-            <div dangerouslySetInnerHTML={{ __html: scheduledWeek }}></div>
-          </div>
-        </Section>
+        <div className="container">
+          <Section title="Weekly Schedule ✅">
+            <Hint>{getWeekTasksComplete(week)} Tasks completed</Hint>
+            <div id="WeeklySchedule">
+              <div dangerouslySetInnerHTML={{ __html: scheduledWeek }}></div>
+            </div>
+          </Section>
+        </div>
       </main>
       <Footer></Footer>
     </>

@@ -30,9 +30,24 @@ body {
   );
 }
 
+p,
+h1,
+ul {
+  text-align: left;
+  padding: 0;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+p {
+  color: #718096;
+  font-size: 1.2rem;
+}
+
 header {
-  background-color: darkslategray;
-  color: white;
+  background-color: #fef1d3;
   font-size: 1.5rem;
   padding: 1rem;
   text-align: center;
@@ -45,6 +60,19 @@ main {
   max-height: var(--mainHeight);
   overflow-y: scroll;
   text-align: center;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 }
 
 .breadcrumbs ul {
@@ -66,14 +94,14 @@ li {
 }
 
 footer {
-  background-color: darkslategray;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: #718096;
   padding: 1rem;
   text-align: center;
 }
 
 .day {
-  height: calc(1/5 * var(--mainHeight));
+  height: calc(1 / 5 * var(--mainHeight));
   background-color: lightblue;
 }
 
@@ -93,8 +121,6 @@ footer {
 }
 
 #WeeklySchedule {
-  max-width: 700px;
-  margin: auto;
 }
 
 .circle-container {
@@ -116,9 +142,9 @@ footer {
 }
 
 .circle-container .circle {
-  height: 1rem; 
-  width: 1rem; 
-  background: white;        
+  height: 1rem;
+  width: 1rem;
+  background: white;
   border-radius: 50%;
   border: 0.2rem solid MediumSlateBlue;
   cursor: pointer;
@@ -139,13 +165,13 @@ footer {
 }
 
 .shape-container > div {
-  width: calc(100% - (20px * 2) / 2)
+  width: calc(100% - (20px * 2) / 2);
 }
 
 .square {
   height: 8rem;
   width: 8rem;
-  background-color: green;  
+  background-color: green;
   border: 0.5rem solid black;
   margin: 1rem;
 }
@@ -153,7 +179,7 @@ footer {
 .shape-container .circle {
   height: 8rem;
   width: 8rem;
-  background-color: blue;  
+  background-color: blue;
   border-radius: 50%;
   border: 0.5rem solid black;
   margin: 1rem;
@@ -162,7 +188,7 @@ footer {
 .shape-container .diamond {
   height: 8rem;
   width: 8rem;
-  background-color: yellow;  
+  background-color: yellow;
   transform: rotate(45deg);
   border: 0.5rem solid black;
   margin: 1rem;
@@ -178,7 +204,7 @@ footer {
 }
 
 .triangle:after {
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   position: absolute;
@@ -186,7 +212,7 @@ footer {
   border-left: 7.5rem solid transparent;
   border-bottom: 7.5rem solid red;
   left: -7.5rem;
-  top: .6rem;
+  top: 0.6rem;
 }
 
 .month-schedule > div {
