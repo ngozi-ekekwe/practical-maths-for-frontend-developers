@@ -1,32 +1,40 @@
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 export default function BreadCrumbs() {
+  const router = useRouter()
+  const activeClass = router.pathname;
+  const shoppingCartPath = "/shopping-cart";
+  const weeklySchedulePath = "/weekly-schedule";
+  const monthlyExpensePath = "/monthly-expense-sheet";
+  const cssShapes = "/css-shapes";
+
   return (
     <nav className="breadcrumbs">
-      <ul>
+      <ul className="container">
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a className="">Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/shopping-cart">
-            <a>Shopping Cart</a>
+          <Link href={shoppingCartPath}>
+            <a className={activeClass === shoppingCartPath ? 'active': ''}>Shopping Cart</a>
           </Link>
         </li>
         <li>
-          <Link href="/weekly-schedule">
-            <a> Weekly Schedule</a>
+          <Link href={weeklySchedulePath}>
+            <a className={activeClass === weeklySchedulePath ? 'active': ''}> Weekly Schedule</a>
           </Link>
         </li>
         <li>
-          <Link href="/monthly-expense-sheet">
-            <a> Monthly Expense Sheet</a>
+          <Link href={monthlyExpensePath}>
+            <a className={activeClass === monthlyExpensePath ? 'active': ''}> Monthly Expense Sheet</a>
           </Link>
         </li>
         <li>
-          <Link href="/css-shapes">
-            <a> CSS Shapes</a>
+          <Link href={cssShapes}>
+            <a className={activeClass === cssShapes ? 'active': ''}> CSS Shapes</a>
           </Link>
         </li>
       </ul>

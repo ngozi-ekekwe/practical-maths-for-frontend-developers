@@ -2,7 +2,6 @@ import Head from "next/head";
 import Header from "@components/Header";
 import Section from "@components/Section";
 import BreadCrumbs from "@components/Breadcrumbs";
-import Hint from "@components/Hint";
 import Footer from "@components/Footer";
 
 export default function CSSShapes() {
@@ -19,8 +18,7 @@ export default function CSSShapes() {
         <div className="container">
           <Section title="🔺 CSS Shapes 🔵" />
           <p>
-            Randomly generates a shopping cart with different products, price
-            and total price including tax rate
+            Shapes derived from HTML tags and CSS
           </p>
           <div className="shape-container">
             <div>

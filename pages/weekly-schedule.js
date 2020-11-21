@@ -2,7 +2,6 @@ import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Section from "@components/Section";
-import Hint from "@components/Hint";
 import { roll } from "utils";
 import BreadCrumbs from "@components/Breadcrumbs";
 
@@ -108,8 +107,7 @@ export default function WeeklySchedular() {
         <div className="container">
           <Section title="Weekly Schedule ✅">
             <p>
-              Randomly generates a shopping cart with different products, price
-              and total price including tax rate
+              Randomly generates a Weekly schedule to completed and uncomplete tasks
             </p>
             <div id="WeeklySchedule">
               <div dangerouslySetInnerHTML={{ __html: scheduledWeek }}></div>

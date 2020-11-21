@@ -3,7 +3,6 @@ import Header from "@components/Header";
 import Section from "@components/Section";
 import Footer from "@components/Footer";
 import BreadCrumbs from "@components/Breadcrumbs";
-import Hint from "@components/Hint";
 import { roll } from "utils";
 
 export default function MonthlyExpenseSheet() {
@@ -86,8 +85,8 @@ export default function MonthlyExpenseSheet() {
       acc +
       `
       <div class="day">
-      ${currentDay.day.getDate()}
-      ${displayExpenses(currentDay.expenses)}
+      <div class="current-day">${currentDay.day.getDate()}</div>
+      ${displayExpenses(currentDay.expenses) || 0}
       </div>
      `
     );
@@ -106,14 +105,14 @@ export default function MonthlyExpenseSheet() {
         <div className="container">
           <Section title="Monthly Expense Sheet 📅">
             <p>
-              Randomly generates a shopping cart with different products, price
-              and total price including tax rate
+              Randomly generates a monthly expense sheet
             </p>
-            <div className="month-schedule">
-              <div className="monthly-summary">
-                Monthly Budget ${monthlyBudget.toFixed(2)} | Net Value $
-                {monthlyNetValue.toFixed(2)}
+            <div className="monthly-summary">
+               <div><span> Monthly Budget: </span> ${monthlyBudget.toFixed(2)}</div>
+                <div><span> Net Value: </span>$
+                {monthlyNetValue.toFixed(2)}</div>
               </div>
+            <div className="month-schedule">
               <div dangerouslySetInnerHTML={{ __html: printMonth }}></div>
             </div>
           </Section>

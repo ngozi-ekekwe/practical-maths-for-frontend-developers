@@ -52,10 +52,8 @@ export default function ShoppingCart() {
         <div className="container">
           <Section title="Shopping Cart 🛒">
             <p>
-              Randomly generates a shopping cart with different products, price
-              and total price including tax rate
+            Randomly generates a list of products, calculate the total price of the products and apply a tax rate.
             </p>
-            <h3 className={styles.product__header}>Product Details</h3>
             <div className={styles.shopping__cart}>
               <div className={styles.products}>
                 {products &&
